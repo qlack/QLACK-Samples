@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import '@angular/material/prebuilt-themes/deeppurple-amber.css';*/
+/*@import '@angular/material/prebuilt-themes/pink-bluegrey.css';*/
+/*@import '@angular/material/prebuilt-themes/purple-green.css';*/
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+@import "~material-design-icons/iconfont/material-icons.css";
+
+.mat-slide-toggle.mat-primary:not(mat-checked):not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: white;
+}
+
+.mat-slide-toggle.mat-primary:not(mat-checked):not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: rgba(0,0,0,.38)
+}
+
+.frame {
+  position : absolute;
+  top      : 0;
+  right    : 0;
+  height   : 100%;
+  width    : 50%;
+}

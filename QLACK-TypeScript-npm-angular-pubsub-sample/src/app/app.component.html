@@ -1,0 +1,102 @@
+<!-- Toolbar -->
+<div fxLayout="row wrap" fxFlex="100">
+  <div class="toolbar" role="banner" fxLayout="row wrap" fxFlex="100">
+    <a aria-label="Angular on twitter" target="_blank" rel="noopener"
+       href="https://twitter.com/angular" title="Twitter">
+    </a>
+    <div class="spacer"></div>
+    <span style="color: white;padding-right: 15px;"><h1>{{!isClient ? 'server': clientInstanceId}}</h1></span>
+  </div>
+
+  <div fxLayout="row wrap" fxFlex="100" role="main">
+
+    <!-- Highlight Card -->
+    <div class="card highlight-card card-small" fxFlex="20" fxFlex.md="60" fxFlex.sm="60"
+         fxFlex.xs="60" fxFlex.lt-sm="60" style="margin: auto; margin-top: 1em;">
+      <mat-icon>wifi</mat-icon>
+      <span>{{ title }} {{!isClient ? 'server' : 'client'}}</span>
+    </div>
+
+    <!-- Links -->
+    <div class="card-container" fxLayout="row wrap" fxFlex="100">
+      <form>
+        <th mat-header-cell *matHeaderCellDef></th>
+        <table>
+          <tr>
+            <td mat-cell style="padding:10px;">
+              <mat-form-field>
+                <input matInput placeholder="Enter channel" #channel>
+              </mat-form-field>
+            </td>
+
+            <td mat-cell style="padding:10px;">
+              <button type="button" mat-raised-button color="primary"
+                      matTooltip="Subscribe to channel"
+                      mat-button
+                      matTooltipPosition="above"
+                      (click)="subscribeToChannel(this.channel.value)">
+                <mat-icon>done_outline</mat-icon>
+                Subscribe
+              </button>
+            </td>
+            <td mat-cell style="padding:10px;">
+              <button type="button" mat-raised-button color="warn"
+                      matTooltip="Unsubscribe from channel"
+                      mat-button
+                      matTooltipPosition="above"
+                      (click)="unsubscribeFromChannel(this.channel.value)">
+                <mat-icon>clear</mat-icon>
+                Unsubscribe
+              </button>
+            </td>
+          </tr>
+          <tr *ngIf="!isClient">
+            <td mat-cell style="padding:10px;">
+              <mat-form-field>
+                <input matInput placeholder="Enter Message" #message>
+              </mat-form-field>
+            </td>
+
+            <td mat-cell style="padding:10px;">
+              <button type="button" mat-raised-button color="default"
+                      matTooltip="Send Message"
+                      mat-button
+                      matTooltipPosition="above"
+                      (click)="sendMessage(this.channel.value, this.message.value)">
+                <mat-icon>mail_outline</mat-icon>
+                Send Message
+              </button>
+            </td>
+          </tr>
+          <tr *ngIf="isClient">
+            <mat-form-field>
+              <mat-label>The message</mat-label>
+              <textarea matInput name="messageTextArea" [(ngModel)]="message"
+                        cdkTextareaAutosize
+                        cdkAutosizeMinRows="1"
+                        cdkAutosizeMaxRows="5"></textarea>
+            </mat-form-field>
+          </tr>
+          <tr *ngIf="isClient">
+            <mat-form-field>
+              <mat-label>The message Object</mat-label>
+              <textarea matInput name="messageObjectTextArea" [(ngModel)]="messageObject"
+                        cdkTextareaAutosize
+                        cdkAutosizeMinRows="6"
+                        cdkAutosizeMaxRows="10"></textarea>
+            </mat-form-field>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <div fxFlex="100" fxLayout="row wrap">
+      <iframe fxFlex="50" *ngIf="!isClient" width="100%" height="500"
+              [src]="clientIframeUrl"></iframe>
+      <iframe fxFlex="50" *ngIf="!isClient" width="100%" height="500"
+              [src]="clientIframeUrl"></iframe>
+    </div>
+
+  </div>
+</div>
+
+<router-outlet></router-outlet>
