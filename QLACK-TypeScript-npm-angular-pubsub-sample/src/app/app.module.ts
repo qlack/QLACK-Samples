@@ -9,7 +9,7 @@ import {MatInputModule} from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {QNgPubSubModule} from '@qlack/qng-pub-sub';
+import {QngPubsubModule} from '@qlack/qng-pubsub';
 
 @NgModule({
   declarations: [
@@ -25,10 +25,11 @@ import {QNgPubSubModule} from '@qlack/qng-pub-sub';
     MatInputModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    QNgPubSubModule
+    QngPubsubModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
 }
+

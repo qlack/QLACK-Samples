@@ -4,7 +4,7 @@ import {environment} from '../environments/environment';
 
 import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 import {Message} from '../types/message';
-import {QNgPubSubService} from '@qlack/qng-pub-sub';
+import {QngPubsubService} from '@qlack/qng-pubsub';
 
 @Component({
   selector: 'app-root',
@@ -35,7 +35,7 @@ export class AppComponent {
     }
   }
 
-  constructor(private qPubSubService: QNgPubSubService, private sanitizer: DomSanitizer) {
+  constructor(private qPubSubService: QngPubsubService, private sanitizer: DomSanitizer) {
     this.isClient = AppComponent.getParamValue('isClient') === 'true';
     this.allowedOrigins = environment.allowedOrigins;
 
