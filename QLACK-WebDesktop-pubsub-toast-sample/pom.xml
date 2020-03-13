@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.eurodyn.qlack.samples</groupId>
+  <artifactId>qlack-webdesktop-pubsub-toast-sample</artifactId>
+  <version>3.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>QLACK-WebDesktop-PubSub-Toast-Sample</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>1.8</java.version>
+    <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+    <spring-boot.version>2.2.5.RELEASE</spring-boot.version>
+    <lombok.version>1.18.6</lombok.version>
+    <frontend.maven.plugin>1.8.0</frontend.maven.plugin>
+    <node.version>v10.16.3</node.version>
+    <npm.version>6.12.0</npm.version>
+  </properties>
+
+  <modules>
+    <module>qlack-webdesktop-pubsub-toast-sample-ui</module>
+    <module>qlack-webdesktop-pubsub-toast-sample-app</module>
+  </modules>
+</project>

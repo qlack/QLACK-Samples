@@ -1,0 +1,39 @@
+# application configuration
+---
+applicationName: toastMessagesSample
+groupName: system
+appUrl: 'http://localhost:8093'
+appPath: '/pubsubToastSample/'
+icon: 'http://localhost:8082/pubsubToastSample/logo/icon'
+iconSmall: 'http://localhost:8082/pubsubToastSample/logo/icon_small'
+width: '800'
+minWidth: '470'
+height: '500'
+minHeight: '450'
+active: true
+multipleInstances: false
+restrictAccess: false
+resizable: true
+draggable: true
+closable: true
+minimizable: true
+maximizable: true
+system: false
+showTitle: true
+proxyAppUrl: '/pubsubToastSample/'
+proxyAppPath: '/pubsubToastSample/**'
+sensitiveHeaders: ''
+version: '3.0.0-SNAPSHOT'
+lexicon:
+  - languageLocale: en
+    values:
+      - key: title
+        value: Pub/Sub Toast Messages
+      - key: description
+        value: Application which sends toast messages using Pub/Sub.
+  - languageLocale: el
+    values:
+      - key: title
+        value: Pub/Sub Toast Μηνύματα
+      - key: description
+        value: Εφαρμογή η οποία στέλνει toast μηνύματα με την χρήση του Pub/Sub.
