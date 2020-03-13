@@ -22,7 +22,6 @@ system: false
 showTitle: true
 proxyAppUrl: '/pubsubToastSample/'
 proxyAppPath: '/pubsubToastSample/**'
-sensitiveHeaders: ''
 version: '3.0.0-SNAPSHOT'
 lexicon:
   - languageLocale: en
