@@ -4,8 +4,8 @@ applicationName: userProfileSample
 groupName: system
 appUrl: 'http://localhost:8094'
 appPath: '/pubsubUserProfileSample/'
-icon: 'http://localhost:8082/pubsubUserProfileSample/logo/icon'
-iconSmall: 'http://localhost:8082/pubsubUserProfileSample/logo/icon_small'
+icon: 'http://localhost:8082/pubsubUserProfile/logo/icon'
+iconSmall: 'http://localhost:8082/pubsubUserProfile/logo/icon_small'
 width: '800'
 minWidth: '470'
 height: '500'
@@ -20,8 +20,8 @@ minimizable: true
 maximizable: true
 system: false
 showTitle: true
-proxyAppUrl: '/pubsubUserProfileSample/'
-proxyAppPath: '/pubsubUserProfileSample/**'
+proxyAppUrl: '/pubsubUserProfile/'
+proxyAppPath: '/pubsubUserProfile/**'
 version: '3.0.0-SNAPSHOT'
 lexicon:
   - languageLocale: en

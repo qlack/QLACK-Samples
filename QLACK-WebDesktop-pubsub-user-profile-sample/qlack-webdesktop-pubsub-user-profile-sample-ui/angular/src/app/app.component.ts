@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {QngPubsubService} from '@qlack/qng-pubsub';
 import {QPubSub} from '@qlack/qpubsub';
 
@@ -23,6 +23,6 @@ export class AppComponent {
   }
 
   retrieveUserInformation() {
-    this.qPubSubService.publish('QUserInformationRequest', "PLEASE!");
+    this.qPubSubService.publish('QUserInformationRequest', "");
   }
 }
