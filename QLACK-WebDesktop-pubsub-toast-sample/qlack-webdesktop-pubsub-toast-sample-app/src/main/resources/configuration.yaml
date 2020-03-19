@@ -4,8 +4,8 @@ applicationName: toastMessagesSample
 groupName: system
 appUrl: 'http://localhost:8093'
 appPath: '/pubsubToastSample/'
-icon: 'http://localhost:8082/pubsubToastSample/logo/icon'
-iconSmall: 'http://localhost:8082/pubsubToastSample/logo/icon_small'
+icon: 'http://localhost:8082/pubsubToast/logo/icon'
+iconSmall: 'http://localhost:8082/pubsubToast/logo/icon_small'
 width: '800'
 minWidth: '470'
 height: '500'
@@ -20,8 +20,8 @@ minimizable: true
 maximizable: true
 system: false
 showTitle: true
-proxyAppUrl: '/pubsubToastSample/'
-proxyAppPath: '/pubsubToastSample/**'
+proxyAppUrl: '/pubsubToast/'
+proxyAppPath: '/pubsubToast/**'
 version: '3.0.0-SNAPSHOT'
 lexicon:
   - languageLocale: en
