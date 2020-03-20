@@ -10,9 +10,6 @@ import org.springframework.context.annotation.ComponentScan;
  * @author EUROPEAN DYNAMICS SA
  */
 @SpringBootApplication
-@ComponentScan(basePackages = {
-    "com.eurodyn.qlack.samples.webdesktop.pubsub.userprofile.sample"
-})
 public class QlackSamplesWebDesktopPubSubToastSampleApp {
 
   /**
