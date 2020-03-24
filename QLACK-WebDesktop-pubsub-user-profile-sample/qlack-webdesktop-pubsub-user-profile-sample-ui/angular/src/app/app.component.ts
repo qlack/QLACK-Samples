@@ -34,9 +34,9 @@ export class AppComponent implements OnInit{
     this.qPubSubService.subscribe('QUserInformationResponse', (message: QPubSub.Message) => {
       this.form = this.fb.group({
         id: [''],
-        firstName: [{value: message.clientID, disabled: true}],
-        lastName: [{value: message.originalClientID, disabled: true}],
-        defaultLanguage: [{value: message.topic,  disabled: true}],
+        firstName: [{value: message.msg["firstName"], disabled: true}],
+        lastName: [{value: message.msg["lastName"], disabled: true}],
+        defaultLanguage: [{value: message.msg["defaultLanguage"],  disabled: true}],
         profileImage: [undefined]
       });
     });
