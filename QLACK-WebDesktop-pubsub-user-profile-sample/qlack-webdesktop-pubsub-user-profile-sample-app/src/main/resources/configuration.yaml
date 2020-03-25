@@ -20,8 +20,7 @@ minimizable: true
 maximizable: true
 system: false
 showTitle: true
-proxyAppUrl: '/pubsubUserProfile/'
-proxyAppPath: '/pubsubUserProfile/**'
+proxyAppPath: '/pubsubUserProfile/'
 version: '3.0.0-SNAPSHOT'
 lexicon:
   - languageLocale: en
