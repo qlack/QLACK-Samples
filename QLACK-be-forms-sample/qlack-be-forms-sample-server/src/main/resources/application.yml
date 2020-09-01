@@ -1,0 +1,45 @@
+# spring properties
+spring:
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+server:
+  port: 8081
+zuul:
+  host:
+    connect-timeout-millis: 100000
+    socket-timeout-millis: 100000
+  routes:
+#    local:
+#      path: /api/**
+#      url: http://127.0.0.1:8080/api/
+#      sensitiveHeaders:
+    fr:
+      path: /fr/**
+      url: http://localhost:8080/fr/
+      sensitiveHeaders:
+    xforms_server:
+      path: /xforms-server/**
+      url: http://localhost:8080/xforms-server/
+      sensitiveHeaders:
+    xforms_server_dynamic:
+      path: /xforms-server/form/dynamic/**
+      url: http://localhost:8080/xforms-server/form/dynamic
+      sensitiveHeaders:
+    xforms_server_upload:
+      path: /xforms-server/upload
+      url: forward:/api/secured/file/heartbeat
+      sensitiveHeaders:
+    apps:
+      path: /apps/**
+      url: http://localhost:8080/apps/
+      sensitiveHeaders: 
+    ops:
+      path: /ops/**
+      url: http://localhost:8080/ops/
+      sensitiveHeaders: 
+    xbl:
+      path: /xbl/**
+      url: http://localhost:8080/xbl/
+      sensitiveHeaders: 
