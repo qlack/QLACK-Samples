@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
-import {QngPubsubModule} from '@qlack/qng-pubsub';
+import {QNgPubSubModule} from '@qlack/qng-pubsub';
 import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
@@ -14,7 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
   imports: [
     BrowserModule,
     NoopAnimationsModule,
-    QngPubsubModule,
+    QNgPubSubModule,
     MatButtonModule
   ],
   providers: [{provide: Window, useValue: window}],

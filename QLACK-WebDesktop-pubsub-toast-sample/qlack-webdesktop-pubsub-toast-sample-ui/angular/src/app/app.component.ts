@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {QngPubsubService} from '@qlack/qng-pubsub';
+import {QNgPubSubService} from '@qlack/qng-pubsub';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +8,14 @@ import {QngPubsubService} from '@qlack/qng-pubsub';
 })
 export class AppComponent {
   title = 'qlack-webdesktop-pubsub-toast-sample-ui';
-  private qPubSubService: QngPubsubService;
+  private qPubSubService: QNgPubSubService;
 
-  constructor(qPubSubService: QngPubsubService) {
+  constructor(qPubSubService: QNgPubSubService) {
     this.qPubSubService = qPubSubService;
     this.qPubSubService.init('client-' + Math.floor(Math.random() * 9000), false);
   }
 
   publishToastMessage() {
-    this.qPubSubService.publish('QNotifications', 'A test message!!!');
+    this.qPubSubService.publish('QNotifications', 'A test message with version 1.0.1!!!');
   }
 }
